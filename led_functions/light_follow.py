@@ -4,13 +4,15 @@ from time import sleep
 
 def light_follow(strip):
     initial = True
+    n = range(strip.numPixels())
     
-    for i in range(strip.numPixels()):
-        if not initial:
-            strip.setPixelColor(i - 1, Color(0, 0, 0))
+    for j in n: 
+        for i in n[-1] - j:
+            if not initial:
+                strip.setPixelColor(i - 1, Color(0, 0, 0))
+                strip.show()
+            
+            strip.setPixelColor(i, Color(255, 0, 0))
             strip.show()
-        
-        strip.setPixelColor(i, Color(255, 0, 0))
-        strip.show()
-        sleep(25 / 1000.0)
-        initial = False
+            sleep(25 / 1000.0)
+            initial = False
