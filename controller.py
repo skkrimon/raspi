@@ -33,4 +33,4 @@ if __name__ == '__main__':
             pass
         
     except KeyboardInterrupt:
-        clear()
+        clear(strip)
