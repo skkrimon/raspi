@@ -1,5 +1,5 @@
 from rpi_ws281x import PixelStrip, Color
-from programms import clear
+from led_functions.clear import clear
 
 LED_COUNT = 24
 LED_PIN = 18
