@@ -26,6 +26,8 @@ if __name__ == '__main__':
     strip.setPixelColor(1, Color(255, 0, 0))
     strip.setPixelColor(2, Color(0, 255, 0))
     
+    strip.show()
+    
     try:
         while True:
             pass
