@@ -6,4 +6,4 @@ def light_follow(strip):
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, Color(255, 0, 0))
         strip.show()
-        sleep(50 / 1000.0)
+        sleep(25 / 1000.0)
