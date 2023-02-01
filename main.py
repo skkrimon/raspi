@@ -26,6 +26,7 @@ if __name__ == '__main__':
     
     strip.begin()
     print(range(strip.numPixels()))
+    print(strip.numPixels())
     
     try:
         light_follow(strip)
