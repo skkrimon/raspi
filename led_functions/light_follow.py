@@ -6,8 +6,8 @@ def light_follow(strip):
     initial = True
     n = range(strip.numPixels())
     
-    for j in n: 
-        for i in n[-1] - j:
+    for j in n:
+        for i in n - j:
             if not initial:
                 strip.setPixelColor(i - 1, Color(0, 0, 0))
                 strip.show()
