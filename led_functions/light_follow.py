@@ -30,4 +30,9 @@ def generate_color(prev_color):
     if prev_color == Color(0, 0, 0):
         return Color(255, 0, 0)
     
-    return Color(255, 255, 255)
+    if prev_color == Color(255, 0, 0):
+        return Color(0, 255, 0)
+    
+    if prev_color == Color(0, 255, 0):
+        return Color(255, 0, 0)
+        
