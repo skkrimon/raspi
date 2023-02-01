@@ -27,7 +27,9 @@ if __name__ == '__main__':
     strip.begin()
     
     try:
-        light_follow(strip)
+        light_follow(strip, Color(255, 0, 0))
+        light_follow(strip, Color(0, 255, 0), Color(255, 0, 0))
+        light_follow(strip, Color(0, 0, 255), Color(0, 255, 0))
         sleep(5)
             
         while True:
