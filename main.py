@@ -27,11 +27,12 @@ if __name__ == '__main__':
     strip.begin()
     
     try:
+        light_follow(strip)
+        sleep(5)
+            
         while True:
             static_white(strip)
-            sleep(50 / 1000.0)
-            clear(strip)
-            sleep(50 / 1000.0)
+            
             
         
     except KeyboardInterrupt:
