@@ -13,3 +13,4 @@ def light_follow(strip):
         strip.setPixelColor(i, Color(255, 0, 0))
         strip.show()
         sleep(25 / 1000.0)
+        initial = False
