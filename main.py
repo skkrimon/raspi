@@ -26,6 +26,11 @@ if __name__ == '__main__':
     
     strip.begin()
     
+    color = Color(255, 0, 0)
+    print(color.bit_count())
+    print(color.as_integer_ratio())
+    print(color.conjugate())
+    
     try:
         light_follow(strip)
                         
