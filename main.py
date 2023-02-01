@@ -1,6 +1,7 @@
 from rpi_ws281x import PixelStrip, Color
 from led_functions.clear import clear
 from led_functions.static import static_white
+from led_functions.light_follow import light_follow
 
 LED_COUNT = 24
 LED_PIN = 18
@@ -24,16 +25,9 @@ if __name__ == '__main__':
     
     strip.begin()
     
-    static_white(strip)
-    
-    # strip.setPixelColor(1, Color(255, 0, 0))
-    # strip.setPixelColor(2, Color(0, 255, 0))
-    
-    strip.show()
-    
     try:
         while True:
-            pass
+            light_follow(strip)
         
     except KeyboardInterrupt:
         clear(strip)
