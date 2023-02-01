@@ -27,7 +27,7 @@ if __name__ == '__main__':
     
     try:
         while True:
-            light_follow(strip)
+            static_white(strip)
         
     except KeyboardInterrupt:
         clear(strip)
