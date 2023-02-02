@@ -1,5 +1,6 @@
 import websockets
 import asyncio
+import json
 
 PORT = 8765
 
@@ -10,6 +11,10 @@ async def echo(ws, path):
     try:
         async for message in ws:
             print('Received message from client: ' + message)
+            try:
+                message_json = json.loads(message)
+            except:
+                await ws.send('ERROR: invalid json')
             await ws.send('Pong: ' + message)
     except ws.exceptions.ConnectionClosed as e:
         print('A client just disconnected')
